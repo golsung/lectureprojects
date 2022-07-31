@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="유효한 id가 입력된 경우" tests="26" skipped="0" failures="0" errors="0" timestamp="2022-07-29T10:26:11" hostname="MacBook-Pro.local" time="0.075">
+  <properties/>
+  <testcase name="2-abc-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.003"/>
+  <testcase name="5-abc-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="9-abc-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="2-a-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="2-b-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="2-c-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="5-abcabc-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.002"/>
+  <testcase name="9-aaa-12345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="9-aaa-22345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.003"/>
+  <testcase name="9-aaa-32345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="9-aaa-42345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="9-aaa-52345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="9-aaa-62345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="9-aaa-72345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="9-aaa-82345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="9-aaa-92345은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-60000은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="5-abc-61111은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-62222은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-63333은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-64444은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-65555은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-66666은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.002"/>
+  <testcase name="5-abc-67777은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.0"/>
+  <testcase name="5-abc-68888은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <testcase name="5-abc-69999은 유효하다" classname="EmployeeIdTest$WhenValidIdIsEntered" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

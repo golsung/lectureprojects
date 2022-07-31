@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="통과한 경우" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-07-29T10:07:50" hostname="MacBook-Pro.local" time="0.098">
+  <properties/>
+  <testcase name="A 과목 성적 99과 B 과목 성적 60은 통과이다" classname="PassOrNotWithBVATest$WhenPassed" time="0.056"/>
+  <testcase name="A 과목 성적 100과 B 과목 성적 60은 통과이다" classname="PassOrNotWithBVATest$WhenPassed" time="0.005"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 100은 통과이다" classname="PassOrNotWithBVATest$WhenPassed" time="0.0"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 60은 통과이다" classname="PassOrNotWithBVATest$WhenPassed" time="0.001"/>
+  <testcase name="A 과목 성적 -1 또는 B 과목 성적 60이 유효하지 못하다" classname="PassOrNotWithBVATest$WhenPassed" time="0.006"/>
+  <testcase name="A 과목 성적 60 또는 B 과목 성적 -1이 유효하지 못하다" classname="PassOrNotWithBVATest$WhenPassed" time="0.001"/>
+  <testcase name="A 과목 성적 60 또는 B 과목 성적 101이 유효하지 못하다" classname="PassOrNotWithBVATest$WhenPassed" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

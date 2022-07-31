@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="윤년인 경우 테스트" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-07-29T07:46:57" hostname="MacBook-Pro.local" time="0.01">
+  <properties/>
+  <testcase name="1600년은 윤년이다" classname="prac.LeapYearTest$WhenYearIsLeap" time="0.002"/>
+  <testcase name="2016년은 윤년이다" classname="prac.LeapYearTest$WhenYearIsLeap" time="0.004"/>
+  <testcase name="2000년은 윤년이다" classname="prac.LeapYearTest$WhenYearIsLeap" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

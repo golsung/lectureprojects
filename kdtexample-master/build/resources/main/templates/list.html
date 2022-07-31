@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thmeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+<title>성적 목록</title>
+</head>
+<body>
+	<table>
+		<tr th:each="student: ${students}">
+			<td th:text="${student.name}">Chung, Insang</td>
+			<td th:text="${student.grade}">F</td>	
+			<td>
+				<form method="get" action="/edit">
+					<input type="submit" id="btnEditStudentGrade" value="편집" />
+					<input type="hidden" name="id" th:value="${student.id}" />
+				</form>
+			</td>
+			<td>
+				<form method="post" action="/delete">
+					<input type="submit" id="btnStudentGrade" value="삭제" />
+					<input type="hidden" name="id" th:value="${student.id}" />
+				</form>
+			</td>	
+		</tr>
+	</table>
+</body>
+</html>
