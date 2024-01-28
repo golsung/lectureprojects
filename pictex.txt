@@ -1,0 +1,4 @@
+CPU: x86, ia64, amd64
+Memory: 4G, 8G, 32G, 64G
+Rate: Basic, Light, Unlimited
+Customer: Normal, VIP

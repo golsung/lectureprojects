@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="실패" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-05-11T04:32:37" hostname="MacBook-Pro-7.local" time="0.012">
+  <properties/>
+  <testcase name="A 과목 성적 59과 B 과목 성적 60은 실패이다" classname="PassOrNotWithBvaTest$WhenPassed$WhenFailed" time="0.001"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 59은 실패이다" classname="PassOrNotWithBvaTest$WhenPassed$WhenFailed" time="0.002"/>
+  <testcase name="A 과목 성적 50과 B 과목 성적 60은 실패이다" classname="PassOrNotWithBvaTest$WhenPassed$WhenFailed" time="0.0"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 50은 실패이다" classname="PassOrNotWithBvaTest$WhenPassed$WhenFailed" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

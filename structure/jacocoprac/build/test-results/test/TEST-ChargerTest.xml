@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ChargerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-13T09:13:53" hostname="MacBook-Pro-7.local" time="0.081">
+  <properties/>
+  <testcase name="문장테스팅" classname="ChargerTest" time="0.073"/>
+  <testcase name="문장테스팅" classname="ChargerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

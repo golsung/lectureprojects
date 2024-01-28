@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="통과" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-11T04:32:37" hostname="MacBook-Pro-7.local" time="0.064">
+  <properties/>
+  <testcase name="A 과목 성적 100과 B 과목 성적 60은 통과이다" classname="PassOrNotWithBvaTest$WhenPassed" time="0.053"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 100은 통과이다" classname="PassOrNotWithBvaTest$WhenPassed" time="0.0"/>
+  <testcase name="A 과목 성적 60과 B 과목 성적 60은 통과이다" classname="PassOrNotWithBvaTest$WhenPassed" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

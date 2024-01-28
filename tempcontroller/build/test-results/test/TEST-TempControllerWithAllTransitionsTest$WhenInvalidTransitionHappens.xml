@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="For invalid transitions" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-07-29T23:21:11" hostname="MacBook-Pro.local" time="0.49">
+  <properties/>
+  <testcase name="Operating-&gt;inRange-&gt;Operating" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.447"/>
+  <testcase name="Idle-&gt;stop-&gt;Idle" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.002"/>
+  <testcase name="Operating-&gt;start-&gt;Operating" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.002"/>
+  <testcase name="Cooling-&gt;start-&gt;Cooling" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.0"/>
+  <testcase name="Heating-&gt;low-&gt;Heating" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.0"/>
+  <testcase name="Idle-&gt;high-&gt;Idle" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.001"/>
+  <testcase name="Heating-&gt;stop-&gt;Heating" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.004"/>
+  <testcase name="Cooling-&gt;stop-&gt;Cooling" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.003"/>
+  <testcase name="Cooling-&gt;high-&gt;Cooling" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.001"/>
+  <testcase name="Heating-&gt;start-&gt;Heating" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.001"/>
+  <testcase name="Idle-&gt;low-&gt;Idle" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.002"/>
+  <testcase name="Idle-&gt;inRange-&gt;Idle" classname="TempControllerWithAllTransitionsTest$WhenInvalidTransitionHappens" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

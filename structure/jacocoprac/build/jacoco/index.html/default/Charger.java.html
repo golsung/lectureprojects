@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Charger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jacocoprac</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Charger.java</span></div><h1>Charger.java</h1><pre class="source lang-java linenums"><span class="fc" id="L1">public class Charger {</span>
+    public int phone_charge(int useTime) {
+<span class="fc" id="L3">        int charge = 0;</span>
+<span class="pc bpc" id="L4" title="1 of 2 branches missed.">        if (useTime &gt; 0) {</span>
+<span class="fc" id="L5">            charge = 20000;</span>
+<span class="pc bpc" id="L6" title="1 of 2 branches missed.">            if (useTime &gt; 100) {</span>
+<span class="fc bfc" id="L7" title="All 2 branches covered.">                if (useTime &lt;= 200)</span>
+<span class="fc" id="L8">                    charge += (useTime - 100) * 300;</span>
+                else {
+<span class="fc" id="L10">                    charge += (useTime - 200) * 100 + 30000;</span>
+<span class="pc bpc" id="L11" title="1 of 2 branches missed.">                    if (charge &gt; 60000)</span>
+<span class="fc" id="L12">                        charge *= 0.9;</span>
+                }
+            }
+        }
+<span class="fc" id="L16">        return charge;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

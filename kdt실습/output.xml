@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.1 on darwin)" generated="20220730 16:03:48.260" rpa="false" schemaversion="3">
+<suite id="s1" name="TC12" source="/Users/chung-insang/Desktop/2022/lecture/test-lecture/sure-22-8:9-8:12/kdt실습/TC12.robot">
+<test id="s1-t1" name="Students should get credits" line="14">
+<kw name="Visit Grader Home Page" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:03:48.341" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8081'.</msg>
+<status status="PASS" starttime="20220730 16:03:48.341" endtime="20220730 16:03:52.425"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>1 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220730 16:03:52.425" endtime="20220730 16:03:52.426"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220730 16:03:52.428" level="INFO">Page title is '성적 입력'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.426" endtime="20220730 16:03:52.428"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:48.340" endtime="20220730 16:03:52.428"/>
+</kw>
+<kw name="Should get credits according to their points">
+<arg>정인상1</arg>
+<arg>컴퓨터공학</arg>
+<arg>90</arg>
+<arg>90</arg>
+<arg>95</arg>
+<arg>91.5</arg>
+<arg>A</arg>
+<kw name="Input Student Grade">
+<arg>${name}</arg>
+<arg>${major}</arg>
+<arg>${mid}</arg>
+<arg>${final}</arg>
+<arg>${hw}</arg>
+<kw name="Input Name">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.429" level="INFO">Typing text '정인상1' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.429" endtime="20220730 16:03:52.493"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.429" endtime="20220730 16:03:52.493"/>
+</kw>
+<kw name="Input Major">
+<arg>${major}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:major</arg>
+<arg>${major}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.493" level="INFO">Typing text '컴퓨터공학' into text field 'id:major'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.493" endtime="20220730 16:03:52.523"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.493" endtime="20220730 16:03:52.523"/>
+</kw>
+<kw name="Input Middle Score">
+<arg>${mid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id: midScore</arg>
+<arg>${mid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.524" level="INFO">Typing text '90' into text field 'id: midScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.524" endtime="20220730 16:03:52.556"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.523" endtime="20220730 16:03:52.556"/>
+</kw>
+<kw name="Input Final Score">
+<arg>${final}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:finalScore</arg>
+<arg>${final}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.556" level="INFO">Typing text '90' into text field 'id:finalScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.556" endtime="20220730 16:03:52.589"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.556" endtime="20220730 16:03:52.589"/>
+</kw>
+<kw name="Input Homework Score">
+<arg>${hw}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:hwScore</arg>
+<arg>${hw}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.589" level="INFO">Typing text '95' into text field 'id:hwScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.589" endtime="20220730 16:03:52.619"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.589" endtime="20220730 16:03:52.619"/>
+</kw>
+<kw name="Submit Grade">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnAddStudentGrade</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.620" level="INFO">Clicking button 'id:btnAddStudentGrade'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.619" endtime="20220730 16:03:52.866"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.619" endtime="20220730 16:03:52.866"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.428" endtime="20220730 16:03:52.866"/>
+</kw>
+<kw name="Total Score Should Be">
+<arg>${tot}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:52.871" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220730 16:03:52.866" endtime="20220730 16:03:52.871"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:52.871" endtime="20220730 16:03:52.871"/>
+</return>
+<msg timestamp="20220730 16:03:52.872" level="INFO">${rows} = 1</msg>
+<status status="PASS" starttime="20220730 16:03:52.866" endtime="20220730 16:03:52.872"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${TOTAL}</arg>
+<arg>${tot}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:53.925" level="INFO">Table cell contains '91.5'.</msg>
+<status status="PASS" starttime="20220730 16:03:52.872" endtime="20220730 16:03:53.925"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.866" endtime="20220730 16:03:53.925"/>
+</kw>
+<kw name="Student Grade Should Be">
+<arg>${gr}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:53.930" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220730 16:03:53.926" endtime="20220730 16:03:53.930"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:53.930" endtime="20220730 16:03:53.930"/>
+</return>
+<msg timestamp="20220730 16:03:53.930" level="INFO">${rows} = 1</msg>
+<status status="PASS" starttime="20220730 16:03:53.926" endtime="20220730 16:03:53.930"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${GRADE}</arg>
+<arg>${gr}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:54.964" level="INFO">Table cell contains 'A'.</msg>
+<status status="PASS" starttime="20220730 16:03:53.930" endtime="20220730 16:03:54.964"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:53.925" endtime="20220730 16:03:54.965"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:52.428" endtime="20220730 16:03:54.965"/>
+</kw>
+<kw name="Should get credits according to their points">
+<arg>정인상2</arg>
+<arg>기계공학</arg>
+<arg>85</arg>
+<arg>85</arg>
+<arg>80</arg>
+<arg>83.5</arg>
+<arg>B</arg>
+<kw name="Input Student Grade">
+<arg>${name}</arg>
+<arg>${major}</arg>
+<arg>${mid}</arg>
+<arg>${final}</arg>
+<arg>${hw}</arg>
+<kw name="Input Name">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:54.966" level="INFO">Typing text '정인상2' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220730 16:03:54.966" endtime="20220730 16:03:55.002"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:54.966" endtime="20220730 16:03:55.002"/>
+</kw>
+<kw name="Input Major">
+<arg>${major}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:major</arg>
+<arg>${major}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.002" level="INFO">Typing text '기계공학' into text field 'id:major'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.002" endtime="20220730 16:03:55.031"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.002" endtime="20220730 16:03:55.031"/>
+</kw>
+<kw name="Input Middle Score">
+<arg>${mid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id: midScore</arg>
+<arg>${mid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.032" level="INFO">Typing text '85' into text field 'id: midScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.032" endtime="20220730 16:03:55.063"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.031" endtime="20220730 16:03:55.063"/>
+</kw>
+<kw name="Input Final Score">
+<arg>${final}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:finalScore</arg>
+<arg>${final}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.064" level="INFO">Typing text '85' into text field 'id:finalScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.064" endtime="20220730 16:03:55.093"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.063" endtime="20220730 16:03:55.093"/>
+</kw>
+<kw name="Input Homework Score">
+<arg>${hw}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:hwScore</arg>
+<arg>${hw}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.093" level="INFO">Typing text '80' into text field 'id:hwScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.093" endtime="20220730 16:03:55.125"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.093" endtime="20220730 16:03:55.125"/>
+</kw>
+<kw name="Submit Grade">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnAddStudentGrade</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.125" level="INFO">Clicking button 'id:btnAddStudentGrade'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.125" endtime="20220730 16:03:55.214"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.125" endtime="20220730 16:03:55.214"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:54.965" endtime="20220730 16:03:55.214"/>
+</kw>
+<kw name="Total Score Should Be">
+<arg>${tot}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:55.218" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20220730 16:03:55.215" endtime="20220730 16:03:55.218"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:55.218" endtime="20220730 16:03:55.218"/>
+</return>
+<msg timestamp="20220730 16:03:55.218" level="INFO">${rows} = 2</msg>
+<status status="PASS" starttime="20220730 16:03:55.214" endtime="20220730 16:03:55.218"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${TOTAL}</arg>
+<arg>${tot}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:56.280" level="INFO">Table cell contains '83.5'.</msg>
+<status status="PASS" starttime="20220730 16:03:55.218" endtime="20220730 16:03:56.280"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:55.214" endtime="20220730 16:03:56.280"/>
+</kw>
+<kw name="Student Grade Should Be">
+<arg>${gr}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:56.285" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20220730 16:03:56.281" endtime="20220730 16:03:56.285"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:56.285" endtime="20220730 16:03:56.285"/>
+</return>
+<msg timestamp="20220730 16:03:56.285" level="INFO">${rows} = 2</msg>
+<status status="PASS" starttime="20220730 16:03:56.281" endtime="20220730 16:03:56.285"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${GRADE}</arg>
+<arg>${gr}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:57.351" level="INFO">Table cell contains 'B'.</msg>
+<status status="PASS" starttime="20220730 16:03:56.285" endtime="20220730 16:03:57.351"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:56.280" endtime="20220730 16:03:57.351"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:54.965" endtime="20220730 16:03:57.351"/>
+</kw>
+<kw name="Should get credits according to their points">
+<arg>정인상3</arg>
+<arg>컴퓨터공학</arg>
+<arg>78</arg>
+<arg>72</arg>
+<arg>76</arg>
+<arg>75.3</arg>
+<arg>C</arg>
+<kw name="Input Student Grade">
+<arg>${name}</arg>
+<arg>${major}</arg>
+<arg>${mid}</arg>
+<arg>${final}</arg>
+<arg>${hw}</arg>
+<kw name="Input Name">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.354" level="INFO">Typing text '정인상3' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.354" endtime="20220730 16:03:57.394"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.352" endtime="20220730 16:03:57.394"/>
+</kw>
+<kw name="Input Major">
+<arg>${major}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:major</arg>
+<arg>${major}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.394" level="INFO">Typing text '컴퓨터공학' into text field 'id:major'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.394" endtime="20220730 16:03:57.424"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.394" endtime="20220730 16:03:57.424"/>
+</kw>
+<kw name="Input Middle Score">
+<arg>${mid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id: midScore</arg>
+<arg>${mid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.424" level="INFO">Typing text '78' into text field 'id: midScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.424" endtime="20220730 16:03:57.455"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.424" endtime="20220730 16:03:57.455"/>
+</kw>
+<kw name="Input Final Score">
+<arg>${final}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:finalScore</arg>
+<arg>${final}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.455" level="INFO">Typing text '72' into text field 'id:finalScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.455" endtime="20220730 16:03:57.485"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.455" endtime="20220730 16:03:57.485"/>
+</kw>
+<kw name="Input Homework Score">
+<arg>${hw}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:hwScore</arg>
+<arg>${hw}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.485" level="INFO">Typing text '76' into text field 'id:hwScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.485" endtime="20220730 16:03:57.517"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.485" endtime="20220730 16:03:57.517"/>
+</kw>
+<kw name="Submit Grade">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnAddStudentGrade</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.517" level="INFO">Clicking button 'id:btnAddStudentGrade'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.517" endtime="20220730 16:03:57.622"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.517" endtime="20220730 16:03:57.622"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.352" endtime="20220730 16:03:57.622"/>
+</kw>
+<kw name="Total Score Should Be">
+<arg>${tot}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:57.626" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20220730 16:03:57.622" endtime="20220730 16:03:57.626"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:57.626" endtime="20220730 16:03:57.626"/>
+</return>
+<msg timestamp="20220730 16:03:57.626" level="INFO">${rows} = 3</msg>
+<status status="PASS" starttime="20220730 16:03:57.622" endtime="20220730 16:03:57.626"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${TOTAL}</arg>
+<arg>${tot}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:58.676" level="INFO">Table cell contains '75.3'.</msg>
+<status status="PASS" starttime="20220730 16:03:57.626" endtime="20220730 16:03:58.676"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.622" endtime="20220730 16:03:58.676"/>
+</kw>
+<kw name="Student Grade Should Be">
+<arg>${gr}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:03:58.681" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20220730 16:03:58.677" endtime="20220730 16:03:58.682"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:03:58.682" endtime="20220730 16:03:58.682"/>
+</return>
+<msg timestamp="20220730 16:03:58.682" level="INFO">${rows} = 3</msg>
+<status status="PASS" starttime="20220730 16:03:58.677" endtime="20220730 16:03:58.682"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${GRADE}</arg>
+<arg>${gr}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:03:59.734" level="INFO">Table cell contains 'C'.</msg>
+<status status="PASS" starttime="20220730 16:03:58.682" endtime="20220730 16:03:59.735"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:58.676" endtime="20220730 16:03:59.735"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:57.351" endtime="20220730 16:03:59.735"/>
+</kw>
+<kw name="Should get credits according to their points">
+<arg>정인상4</arg>
+<arg>전자공학</arg>
+<arg>66</arg>
+<arg>67</arg>
+<arg>60</arg>
+<arg>64.55</arg>
+<arg>D</arg>
+<kw name="Input Student Grade">
+<arg>${name}</arg>
+<arg>${major}</arg>
+<arg>${mid}</arg>
+<arg>${final}</arg>
+<arg>${hw}</arg>
+<kw name="Input Name">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.736" level="INFO">Typing text '정인상4' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.736" endtime="20220730 16:03:59.774"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.736" endtime="20220730 16:03:59.774"/>
+</kw>
+<kw name="Input Major">
+<arg>${major}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:major</arg>
+<arg>${major}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.774" level="INFO">Typing text '전자공학' into text field 'id:major'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.774" endtime="20220730 16:03:59.804"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.774" endtime="20220730 16:03:59.804"/>
+</kw>
+<kw name="Input Middle Score">
+<arg>${mid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id: midScore</arg>
+<arg>${mid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.805" level="INFO">Typing text '66' into text field 'id: midScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.804" endtime="20220730 16:03:59.835"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.804" endtime="20220730 16:03:59.835"/>
+</kw>
+<kw name="Input Final Score">
+<arg>${final}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:finalScore</arg>
+<arg>${final}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.835" level="INFO">Typing text '67' into text field 'id:finalScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.835" endtime="20220730 16:03:59.865"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.835" endtime="20220730 16:03:59.865"/>
+</kw>
+<kw name="Input Homework Score">
+<arg>${hw}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:hwScore</arg>
+<arg>${hw}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.866" level="INFO">Typing text '60' into text field 'id:hwScore'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.866" endtime="20220730 16:03:59.895"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.866" endtime="20220730 16:03:59.895"/>
+</kw>
+<kw name="Submit Grade">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnAddStudentGrade</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:03:59.896" level="INFO">Clicking button 'id:btnAddStudentGrade'.</msg>
+<status status="PASS" starttime="20220730 16:03:59.896" endtime="20220730 16:04:00.011"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.896" endtime="20220730 16:04:00.011"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.735" endtime="20220730 16:04:00.011"/>
+</kw>
+<kw name="Total Score Should Be">
+<arg>${tot}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:04:00.015" level="INFO">${count} = 4</msg>
+<status status="PASS" starttime="20220730 16:04:00.012" endtime="20220730 16:04:00.015"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:04:00.015" endtime="20220730 16:04:00.015"/>
+</return>
+<msg timestamp="20220730 16:04:00.016" level="INFO">${rows} = 4</msg>
+<status status="PASS" starttime="20220730 16:04:00.011" endtime="20220730 16:04:00.016"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${TOTAL}</arg>
+<arg>${tot}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:04:01.085" level="INFO">Table cell contains '64.55'.</msg>
+<status status="PASS" starttime="20220730 16:04:00.016" endtime="20220730 16:04:01.085"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:00.011" endtime="20220730 16:04:01.086"/>
+</kw>
+<kw name="Student Grade Should Be">
+<arg>${gr}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:04:01.089" level="INFO">${count} = 4</msg>
+<status status="PASS" starttime="20220730 16:04:01.086" endtime="20220730 16:04:01.090"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:04:01.090" endtime="20220730 16:04:01.090"/>
+</return>
+<msg timestamp="20220730 16:04:01.090" level="INFO">${rows} = 4</msg>
+<status status="PASS" starttime="20220730 16:04:01.086" endtime="20220730 16:04:01.090"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${GRADE}</arg>
+<arg>${gr}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:04:02.143" level="INFO">Table cell contains 'D'.</msg>
+<status status="PASS" starttime="20220730 16:04:01.090" endtime="20220730 16:04:02.143"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:01.086" endtime="20220730 16:04:02.144"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:59.735" endtime="20220730 16:04:02.144"/>
+</kw>
+<kw name="Should get credits according to their points">
+<arg>정인상5</arg>
+<arg>컴퓨터공학</arg>
+<arg>40</arg>
+<arg>25</arg>
+<arg>13</arg>
+<arg>26.65</arg>
+<arg>F</arg>
+<kw name="Input Student Grade">
+<arg>${name}</arg>
+<arg>${major}</arg>
+<arg>${mid}</arg>
+<arg>${final}</arg>
+<arg>${hw}</arg>
+<kw name="Input Name">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.145" level="INFO">Typing text '정인상5' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.145" endtime="20220730 16:04:02.182"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.145" endtime="20220730 16:04:02.182"/>
+</kw>
+<kw name="Input Major">
+<arg>${major}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:major</arg>
+<arg>${major}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.183" level="INFO">Typing text '컴퓨터공학' into text field 'id:major'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.183" endtime="20220730 16:04:02.213"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.182" endtime="20220730 16:04:02.213"/>
+</kw>
+<kw name="Input Middle Score">
+<arg>${mid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id: midScore</arg>
+<arg>${mid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.213" level="INFO">Typing text '40' into text field 'id: midScore'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.213" endtime="20220730 16:04:02.244"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.213" endtime="20220730 16:04:02.244"/>
+</kw>
+<kw name="Input Final Score">
+<arg>${final}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:finalScore</arg>
+<arg>${final}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.245" level="INFO">Typing text '25' into text field 'id:finalScore'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.245" endtime="20220730 16:04:02.275"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.244" endtime="20220730 16:04:02.276"/>
+</kw>
+<kw name="Input Homework Score">
+<arg>${hw}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:hwScore</arg>
+<arg>${hw}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.276" level="INFO">Typing text '13' into text field 'id:hwScore'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.276" endtime="20220730 16:04:02.306"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.276" endtime="20220730 16:04:02.307"/>
+</kw>
+<kw name="Submit Grade">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnAddStudentGrade</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.307" level="INFO">Clicking button 'id:btnAddStudentGrade'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.307" endtime="20220730 16:04:02.410"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.307" endtime="20220730 16:04:02.410"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.144" endtime="20220730 16:04:02.410"/>
+</kw>
+<kw name="Total Score Should Be">
+<arg>${tot}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:04:02.414" level="INFO">${count} = 5</msg>
+<status status="PASS" starttime="20220730 16:04:02.410" endtime="20220730 16:04:02.414"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:04:02.415" endtime="20220730 16:04:02.415"/>
+</return>
+<msg timestamp="20220730 16:04:02.415" level="INFO">${rows} = 5</msg>
+<status status="PASS" starttime="20220730 16:04:02.410" endtime="20220730 16:04:02.415"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${TOTAL}</arg>
+<arg>${tot}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:04:03.463" level="INFO">Table cell contains '26.65'.</msg>
+<status status="PASS" starttime="20220730 16:04:02.415" endtime="20220730 16:04:03.463"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.410" endtime="20220730 16:04:03.463"/>
+</kw>
+<kw name="Student Grade Should Be">
+<arg>${gr}</arg>
+<kw name="Get Number Of Students In Table">
+<var>${rows}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>xpath://table[2]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220730 16:04:03.467" level="INFO">${count} = 5</msg>
+<status status="PASS" starttime="20220730 16:04:03.463" endtime="20220730 16:04:03.467"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" starttime="20220730 16:04:03.467" endtime="20220730 16:04:03.467"/>
+</return>
+<msg timestamp="20220730 16:04:03.467" level="INFO">${rows} = 5</msg>
+<status status="PASS" starttime="20220730 16:04:03.463" endtime="20220730 16:04:03.467"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[2]</arg>
+<arg>${rows}</arg>
+<arg>${GRADE}</arg>
+<arg>${gr}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220730 16:04:04.527" level="INFO">Table cell contains 'F'.</msg>
+<status status="PASS" starttime="20220730 16:04:03.467" endtime="20220730 16:04:04.527"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:03.463" endtime="20220730 16:04:04.528"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:02.144" endtime="20220730 16:04:04.528"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="TEARDOWN">
+<arg>Delete All Students In Table</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Delete All Students In Table">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnDeleteAll</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220730 16:04:04.529" level="INFO">Clicking button 'id:btnDeleteAll'.</msg>
+<status status="PASS" starttime="20220730 16:04:04.529" endtime="20220730 16:04:04.658"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:04.528" endtime="20220730 16:04:04.658"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220730 16:04:04.658" endtime="20220730 16:04:04.724"/>
+</kw>
+<status status="PASS" starttime="20220730 16:04:04.528" endtime="20220730 16:04:04.724"/>
+</kw>
+<status status="PASS" starttime="20220730 16:03:48.340" endtime="20220730 16:04:04.724"/>
+</test>
+<status status="PASS" starttime="20220730 16:03:48.261" endtime="20220730 16:04:04.725"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC12">TC12</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
