@@ -1,4 +1,3 @@
-package prac;
 
 public class Grader {
 public Grade computeGrade(double m, double f, double h) {
