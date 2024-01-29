@@ -1,4 +1,4 @@
-package prac;
+
 
 public class InvalidRangeException extends RuntimeException {
 
