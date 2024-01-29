@@ -2,33 +2,19 @@ plugins {
     id 'java'
 }
 
-ext {
-    jupiter_version = '5.5.2'
-    hamcrest_version = '2.2'
-    mockito_version = '3.2.4'
-    json_version = '1.1.1'
-}
+group 'org.example'
+version '1.0-SNAPSHOT'
+
 repositories {
     mavenCentral()
 }
-compileJava.options.encoding='UTF-8'
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
+
 dependencies {
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiter_version"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiter_version"
-    testImplementation "org.hamcrest:hamcrest:$hamcrest_version"
-    testImplementation "org.mockito:mockito-core:${mockito_version}"
-    testImplementation "org.mockito:mockito-junit-jupiter:${mockito_version}"
-    implementation "com.googlecode.json-simple:json-simple:${json_version}"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:${jupiter_version}"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:${jupiter_version}"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2'
 }
 
 test {
-  useJUnitPlatform{
-//     includeTags 'smoke'
-//     excludeTags 'unstable'
-    }
+    useJUnitPlatform()
 }
