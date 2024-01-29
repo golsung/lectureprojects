@@ -1,4 +1,3 @@
-package prac;
 
 public class GradeStudent {
 	public Grade computeGrade(Student s) {     
