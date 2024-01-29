@@ -1,4 +1,4 @@
-package prac;
+
 
 public class Student {
 	private String name;
