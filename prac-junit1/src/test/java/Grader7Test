@@ -1,0 +1,87 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class Grader7Test {
+    @DisplayName("중간 점수가 0보다 작은 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForLessThanMidScore0pts() {
+        double midScore = -10;
+        double finalScore = 90;
+        double hwScore = 95;
+
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+    @DisplayName("중간 점수가 100보다 큰 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForWithMoreThanMidScore100pts() {
+        double midScore = 110;
+        double finalScore = 90;
+        double hwScore = 70;
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+
+
+    @DisplayName("기말 점수가 0보다 작은 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForLessThanFinalScore0pts() {
+        double midScore = 80;
+        double finalScore = -90;
+        double hwScore = 95;
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+
+    @DisplayName("기말 점수가 100보다 큰 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForMoreThanFinalScore100pts() {
+        double midScore = 80;
+        double finalScore = 120;
+        double hwScore = 55;
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+    @DisplayName("과제 점수가 0보다 작은 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForLessThanHw0pts() {
+        double midScore = 80;
+        double finalScore = 90;
+        double hwScore = -20;
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+    @DisplayName("과제 점수가 100보다 큰 경우 InvalidRangeException 발생")
+    @Test
+    public void should_RaiseInvalidRangeException_ForMoreThanHw100pts() {
+        double midScore = 80;
+        double finalScore = 70;
+        double hwScore = 150;
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(midScore, finalScore, hwScore);
+        });
+    }
+
+
+}
