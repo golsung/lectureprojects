@@ -1,3 +1,7 @@
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class Grader2Test {
     @DisplayName("총점이 90점이상이면 A")
     @Test
