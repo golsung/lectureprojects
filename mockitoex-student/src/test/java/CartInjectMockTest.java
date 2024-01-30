@@ -23,7 +23,7 @@ class CartInjectMockTest {
         initMocks(this);
         when(pm.getPrice("1234")).thenReturn(1000);
         when(pm.getPrice("7896")).thenReturn(800);
-        ct.setPriceManager(pm);
+     //    ct.setPriceManager(pm);
         ct.put("1234");
         ct.put("7896");
         int total = ct.totalPrice();
