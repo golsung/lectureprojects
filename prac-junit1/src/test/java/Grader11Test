@@ -1,0 +1,27 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class Grader12Test {
+    Grader grader;
+
+    @BeforeEach
+    public void setUp() {
+        grader = new Grader();
+    }
+
+    @DisplayName("Csv source 유효하지 못한 입력")
+    @ParameterizedTest(name="중간점수 {0} 기말점수 {1} 과제점수 {2}에 대해 예외(InvalidRangeException)를 발생해야 한다.")
+    @CsvSource({"-10,90,95", "110, 90, 95", "90, -5, 95", "90, 120, 95", "90, 90, -5", "90, 90, 101"})
+    public void should_ComputeGrade(double m, double f, double h) {
+        assertThrows(InvalidRangeException.class, ()->{
+            grader.computeGrade(m, f, h);
+        });
+    }
+
+}
