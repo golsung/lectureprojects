@@ -1,0 +1,17 @@
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class Grader6Test {
+        @DisplayName("중간 점수가 0보다 작은 경우 InvalidRangeException 발생")
+        @Test
+        public void should_RaiseInvalidRangeException_ForLessThan0pts() {
+            double midScore = -10;
+            double finalScore = 90;
+            double hwScore = 95;
+            Grader grader = new Grader();
+            assertThrows(InvalidRangeException.class, ()->{
+                grader.computeGrade(midScore, finalScore, hwScore);
+            });
+        }
+
+
+}
