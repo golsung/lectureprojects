@@ -1,0 +1,72 @@
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class GraderTest {
+
+    @DisplayName("90점 이상은 A")
+    @Test
+    public void should_GiveGradeOfA_ForStudentsWithMoreThan90pts() {
+        double midScore = 95;
+        double finalScore = 95;
+        double hwScore = 90;
+
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+        assertEquals(Grade.A, actual, "Should be A");
+    }
+
+    @DisplayName("80에서 90점 미만은 B")
+    @Test
+    public void should_GiveGradeOfB_ForStudentsWithMoreThan80pts() {
+        double midScore = 85;
+        double finalScore = 85;
+        double hwScore = 90;
+
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+        assertEquals(Grade.B, actual, "Should be B");
+    }
+
+    @DisplayName("70점에서 80점 미만은 C")
+    @Test
+    public void should_GiveGradeOfC_ForStudentsWithMoreThan70pts() {
+        double midScore = 85;
+        double finalScore = 70;
+        double hwScore = 78;
+
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+        assertEquals(Grade.C, actual, "Should be C");
+    }
+
+    @DisplayName("60점에서 70점 미만은 D")
+    @Test
+    public void should_GiveGradeOfD_ForStudentsWithMoreThan60pts() {
+        double midScore = 75;
+        double finalScore = 65;
+        double hwScore = 65;
+
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+        assertEquals(Grade.D, actual, "Should be D");
+    }
+
+    @DisplayName("60점 미만은 F")
+    @Test
+    public void should_GiveGradeOfF_ForStudentsWithLessThan60pts() {
+        double midScore = 55;
+        double finalScore = 65;
+        double hwScore = 40;
+
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+        assertEquals(Grade.F, actual, "Should be B");
+    }
+}
