@@ -1,12 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Grader10Test {
-//    Grader grader;
-//
-//    @BeforeEach
-//    public void setUp() {
-//        grader = new Grader();
-//    }
+public class Grader8Test {
 
     @DisplayName("Csv source 유효한 입력")
     @ParameterizedTest(name="중간점수 {1} 기말점수 {2} 과제점수 {3}에 대하여 학점은 {0}이어야한다")
