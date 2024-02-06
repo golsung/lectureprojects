@@ -1,0 +1,95 @@
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Grader5Test {
+    Grader grader;
+    @BeforeEach
+    void setUp() {
+        System.out.println("test begins");
+        grader = new Grader();
+    }
+
+//    @BeforeEach
+//    void setUp(TestInfo testInfo) {
+//        System.out.println("test begins " + testInfo.getTestMethod());
+//        System.out.println("test begins " + testInfo.getDisplayName());
+//        grader = new Grader();
+//    }
+
+    @AfterEach
+    void tearDown(TestInfo testInfo) {
+        System.out.println("test ends " + testInfo.getTestMethod());
+        System.out.println("test ends " + testInfo.getDisplayName());
+    }
+
+    @DisplayName("유효한 점수가 입력되는 경우")
+    @Nested
+    class WhenValidScoresEntered {
+        @DisplayName("총점이 90점이상이면 A")
+        @Test
+        public void should_GiveGradeOfA_ForStudentsWithMoreThan90pts() {
+            double midScore = 92;
+            double finalScore = 90;
+            double hwScore = 95;
+
+//        Grader grader = new Grader();
+            Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+            assertEquals(Grade.A, actual, "Should be A");
+        }
+
+        @DisplayName("총점이 80점이상 90점 미만 B")
+        @Test
+        public void should_GiveGradeOfB_ForStudentsWithMoreThan80pts() {
+            double midScore = 85;
+            double finalScore = 80;
+            double hwScore = 90;
+
+//        Grader grader = new Grader();
+            Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+            assertEquals(Grade.B, actual, "Should be B");
+        }
+
+        @DisplayName("총점이 70점이상 80점 미만 C")
+        @Test
+        public void should_GiveGradeOfC_ForStudentsWithMoreThan70pts() {
+            double midScore = 77;
+            double finalScore = 70;
+            double hwScore = 75;
+
+//       Grader grader = new Grader();
+            Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+            assertEquals(Grade.C, actual, "Should be C");
+        }
+
+        @DisplayName("총점이 60점이상 70점 미만 D")
+        @Test
+        public void should_GiveGradeOfD_ForStudentsWithMoreThan60pts() {
+            double midScore = 66;
+            double finalScore = 60;
+            double hwScore = 65;
+
+//        Grader grader = new Grader();
+            Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+            assertEquals(Grade.D, actual, "Should be D");
+        }
+
+        @DisplayName("총점이 60점미만 F")
+        @Test
+        public void should_GiveGradeOfF_ForStudentsWithLessThan60pts() {
+            double midScore = 40;
+            double finalScore = 53;
+            double hwScore = 35;
+
+//        Grader grader = new Grader();
+            Grade actual = grader.computeGrade(midScore, finalScore, hwScore);
+
+            assertEquals(Grade.F, actual, "Should be F");
+        }
+    }
+
+}
