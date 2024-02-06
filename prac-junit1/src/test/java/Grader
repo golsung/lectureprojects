@@ -1,0 +1,30 @@
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class Grader9Test {
+
+    @DisplayName("Csv source 유효한 입력")
+    @ParameterizedTest(name="중간점수 {1} 기말점수 {2} 과제점수 {3}에 대하여 학점은 {0}이어야한다")
+//    @ParameterizedTest
+    @CsvSource({"A,92,90,95", "B,85,80,90", "C,77,70,75", "D,66,60,65", "F,40,53,35"})
+    public void should_ComputeGrade(Grade e, double m, double f, double h) {
+        Grader grader = new Grader();
+        Grade actual = grader.computeGrade(m, f, h);
+        assertEquals(e, actual);
+    }
+
+    @DisplayName("Csv source 범위에 벗어난 입력")
+    @ParameterizedTest(name="중간점수 {0} 기말점수 {1}, 과제점수 {2}에 대해 InvalidRangeException이 발생하여야 한다")
+    @CsvSource({"-10, 90, 90", "190, 90, 90", "90, -10, 90", "90, 110, 90", "90, 90, -10", "90, 90, 110"})
+    public void should_RaiseInvalidRangeException_ForInvalidScores(double m, double f, double h){
+        Grader grader = new Grader();
+        assertThrows(InvalidRangeException.class, () -> {
+            grader.computeGrade(m, f, h);
+        });
+    }
+}
