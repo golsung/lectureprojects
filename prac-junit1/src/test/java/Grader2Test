@@ -2,7 +2,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Grader4Test {
+public class Grader2Test {
 
     Grader grader;
 
